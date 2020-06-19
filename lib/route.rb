@@ -5,6 +5,15 @@ class Route
 	    routes.each {|key, value| self.send(("#{key}="), value)}
 	end
 
+	def save
+	    sql = <<- SQL
+		INSERT INTO routes (name, rating) 
+		VALUES (?, ?)
+	    SQL
+	    DB[:conn].execute(sql)
+	    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM routes")[0][0]
+	end
+
 	def self.all
 	    sql = "SELECT * FROM routes"
 	    DB[:conn].execute(sql)
