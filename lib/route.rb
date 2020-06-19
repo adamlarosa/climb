@@ -6,7 +6,19 @@ class Route
 	end
 
 	def self.all
-	    puts "Show me all the climbing routes!"
+	    sql = "SELECT * FROM routes"
+	    DB[:conn].execute(sql)
+	end
+
+	def self.create_table
+	    sql = <<-SQL
+		CREATE TABLE IF NOT EXISTS routes (
+		id INTEGER PRIMARY KEY,
+		name TEXT,
+		rating TEXT
+	    	)
+	    SQL
+	    DB[:conn].execute(sql)
 	end
 
 end
