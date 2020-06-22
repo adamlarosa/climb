@@ -11,7 +11,9 @@ while input.downcase != "x" do
 	end
 	    case input
 	    when "1"
-		m.search
+		Route.lookup
+	    when "2"
+		puts "this is the configure menu"
 	    end
 	input = m.prompt
 end

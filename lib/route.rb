@@ -21,4 +21,9 @@ class Route
 	    DB[:conn].execute(sql)
 	end
 
+	def self.lookup
+	    puts "query mountain project"
+	    puts "select location, lat, lon"
+	end
+
 end

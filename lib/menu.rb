@@ -6,11 +6,8 @@ class Menu
 	end
 
 	def help
-	    puts "Display valid prompt options"
 	    puts "1 - Search for a route"
+	    puts "2 - Configure your settings"
 	end
 
-	def search
-	   puts "Searching!"
-	end
 end
