@@ -6,7 +6,7 @@ class Route
 	end
 
 	def save
-	    sql = <<- SQL
+	    sql = <<-SQL
 		INSERT INTO routes (name, rating) 
 		VALUES (?, ?)
 	    SQL
@@ -32,7 +32,8 @@ class Route
 
 	def self.lookup
 	    puts "query mountain project"
-	    puts "select location, lat, lon"
+
+
 	end
 
 end
