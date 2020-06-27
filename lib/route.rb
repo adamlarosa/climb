@@ -31,7 +31,16 @@ class Route
 	end
 
 	def self.lookup
+
+	    puts "get lat, lon, grade info & distance"
+
 	    puts "query mountain project"
+
+	    puts "grab array of results"
+
+	    puts "iterate, & scrape d"
+
+	    puts "create instances & save to local database"
 
 
 	end
