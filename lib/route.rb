@@ -1,6 +1,6 @@
 class Route
-	attr_accessor :name, :rating
-	
+	attr_accessor :id, :name, :type, :rating, :stars, :starVotes, :pitches, :location, :url, :imgSqSmall, :imgSmall, :imgSmallMed, :imgMedium, :longitude, :latitude
+
 	def initialize(routes)
 	    routes.each {|key, value| self.send(("#{key}="), value)}
 	end
